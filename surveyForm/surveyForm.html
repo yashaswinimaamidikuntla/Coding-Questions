@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./surveyForm.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1>Survey Form</h1>
+    <form id="surveyForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required><br><br>
 
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required><br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" required>
+            <option value="">Select a Country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+            <option value="China">China</option>
+        </select><br><br>
+
+        <label>Gender:</label><br>
+        <input type="checkbox" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="checkbox" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" required><br><br>
+
+        <button type="button" id="submitBtn">Submit</button>
+        <button type="button" id="resetBtn">Reset</button>
+    </form>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Popup for displaying form data -->
+    <div id="popup" style="display: none;">
+        <h2>Survey Data</h2>
+        <p><strong>First Name:</strong> <span id="popupFirstName"></span></p>
+        <p><strong>Last Name:</strong> <span id="popupLastName"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="popupDOB"></span></p>
+        <p><strong>Country:</strong> <span id="popupCountry"></span></p>
+        <p><strong>Gender:</strong> <span id="popupGender"></span></p>
+        <p><strong>Profession:</strong> <span id="popupProfession"></span></p>
+        <p><strong>Email:</strong> <span id="popupEmail"></span></p>
+        <p><strong>Mobile Number:</strong> <span id="popupMobile"></span></p>
+        <button type="button" id="closePopup">Close</button>
+    </div>
+    <script src="./surveyForm.js"></script>
+</body>
+</html>
